@@ -21,7 +21,7 @@ class ElMercurioParnerCheck
       fullpath = "#{URL.path}?#{q}"
       http.get(fullpath)
     }
-    res.body.to_s =~ /&lt;Estado&gt;(.+)&lt;\/Estado&gt;/
+    res.body.to_s.gsub('&lt;', '<').gsub('&gt;', '>') =~ /<Estado>(.+)<\/Estado>/
     $1.to_i == 1
   end
   
