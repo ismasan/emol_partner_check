@@ -5,12 +5,15 @@ class ElMercurioParnerCheck
   
   URL = URI.parse('http://validasocioexterno.elmercurio.cl/ValidaSocio_Externo.asmx/Alianza_ValidaSocio')
   
+  attr_reader :last_response
+  
   def initialize(account_rut, account_local, account_password)
     @config = {
       :RutAlianza   => account_rut,
       :Local        => account_local,
       :Clave        => account_password
     }
+    @last_response = nil
   end
   
   def partner?(user_rut)
@@ -22,6 +25,9 @@ class ElMercurioParnerCheck
       http.get(fullpath)
     }
     body = res.body.to_s.gsub('&lt;', '<').gsub('&gt;', '>')
+    
+    @last_response = body
+    
     body =~ /<Estado>(.+)<\/Estado>/
     p [:match, body]
     $1.to_i == 1

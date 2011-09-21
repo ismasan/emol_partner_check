@@ -14,6 +14,7 @@ $(function () {
         var $e = $('#results')
         $e.find('.message').html(MESSAGES[klass])
         $e.find('#results_rut').html(data['rut'])
+        $('#raw').text(data['body']).show()
         $e.removeClass('yes').removeClass('no').addClass(klass).slideDown('fast')
       } else {
         alert(data['error'])

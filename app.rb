@@ -37,7 +37,7 @@ class App < Sinatra::Base
     rut = params[:rut].to_s.strip
     data = if rut != ''
       is_partner = checker.partner?(rut)
-      {:response => is_partner, :rut => rut}
+      {:response => is_partner, :rut => rut, :body => checker.last_response}
     else
       {:error => 'Necesitas proveer un RUT'}
     end

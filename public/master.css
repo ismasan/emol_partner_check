@@ -70,3 +70,13 @@ input {
 .no .message {
   background-color: #AE4322;
 }
+
+#raw {
+  display: none;
+  padding: 10px;
+  background: #eee;
+  color: black;
+  display: block;
+  margin-top: 20px;
+  overflow: auto;
+}
