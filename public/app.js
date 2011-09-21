@@ -7,6 +7,7 @@ $(function () {
   
   $('#js_form').submit(function () {
     var params = $(this).serialize()
+    $('#loading').show()
     $.getJSON($(this).attr('action') + '?' + params, function(data) {
       if(data['rut']) {
         var klass = data['response'] ? 'yes' : 'no'
@@ -17,6 +18,7 @@ $(function () {
       } else {
         alert(data['error'])
       }
+      $('#loading').hide()
     });
     return false
   })

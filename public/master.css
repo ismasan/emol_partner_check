@@ -32,7 +32,9 @@ input {
   font-size: 24px;
   padding: 0.2em;
 }
-
+#loading {
+  display: none;
+}
 #results {
   width: 400px;
   margin: 0 auto;
