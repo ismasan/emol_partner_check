@@ -1,0 +1,70 @@
+* {padding: 0; margin: 0;}
+body {
+  background: #123;
+  font-size: 16px;
+  font-family: 'Lucida Grande', helvetica, verdana, sans-serif;
+  text-align: center;
+}
+#wrapper {
+  text-align: left;
+  margin: 100px auto;
+  width: 70%;
+  background: #405662;
+  color: #eee;
+  padding: 40px;
+  border-radius: 30px;
+  border: solid #eee 4px;
+  box-shadow: 4px 4px 8px rgba(0,0,0,0.5);
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -webkit-box-shadow: 4px 4px 8px rgba(0,0,0,0.5);
+  -moz-box-shadow: 4px 4px 8px rgba(0,0,0,0.5);
+}
+
+form {
+  display: block;
+  margin: 20px auto;
+  padding: 20px 0;
+  width: 500px;
+  text-align: center;
+}
+input {
+  font-size: 24px;
+  padding: 0.2em;
+}
+
+#results {
+  width: 400px;
+  margin: 0 auto;
+  display: none;
+}
+#results_rut {
+  background: black;
+  color: white;
+  padding: 5px;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+}
+.message {
+  color: white;
+  text-shadow: 1px 1px 1px white;
+  display: block;
+  font-size: 34px;
+  padding: 20px;
+  width: 200px;
+  margin: 20px 0 0 0;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -webkit-box-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+  -moz-box-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+.yes .message {
+  background-color: #6AAE2B;
+}
+.no .message {
+  background-color: #AE4322;
+}

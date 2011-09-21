@@ -1,0 +1,27 @@
+<html>
+  <head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <link rel="stylesheet" href="/master.css" type="text/css" media="screen" title="no title" charset="utf-8">
+    <script type="text/javascript" charset="utf-8" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+    <script type="text/javascript" charset="utf-8" src="/app.js"></script>
+    <title>El Mercurio verificación de socios</title>
+    
+  </head>
+  <body id="index">
+    
+    <div id="wrapper">
+      <h1>Verificación de socios El Mercurio</h1>
+      
+      <form action="/check.json" method="get" id="js_form">
+        <input type="text" name="rut" placeholder="RUT de socio" />
+        <input type="submit" value="Verificar" />
+      </form>
+      
+      <div id="results" class="no">
+        <h3>RUT: <span id="results_rut">xxxxxxx</span> es socio?</h3>
+        <p class="message">YES</p>
+      </div>
+    </div>
+    
+  </body>
+</html>
