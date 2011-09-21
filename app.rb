@@ -8,8 +8,11 @@ $:.<< File.dirname(__FILE__)
 
 require 'el_mercurio_partner_check'
 
+APP_ROOT = File.expand_path(File.dirname(__FILE__))
+
 class App < Sinatra::Base
   
+  set :root, APP_ROOT
   set :public, Proc.new{ File.join(root, 'public') }
   set :views, Proc.new{ File.join(root, 'views') }
   
