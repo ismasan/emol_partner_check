@@ -10,6 +10,9 @@ require 'el_mercurio_partner_check'
 
 class App < Sinatra::Base
   
+  set :public, Proc.new{ File.join(root, 'public') }
+  set :views, Proc.new{ File.join(root, 'views') }
+  
   configure :development do
     CONFIG = YAML.load_file(File.dirname(__FILE__) + '/config.yml')
   end
