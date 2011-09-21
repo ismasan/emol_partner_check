@@ -1,0 +1,28 @@
+# Verificación de RUT como socio de El Mercurio
+
+## Instalación:
+
+Corre sobre cualquier servidor que soporte Rack (Ruby). Por ejemplo [http://www.heroku.com](http://www.heroku.com)
+
+En ambiente de producción requiere las siguientes variables de ambiente:
+
+    ACCOUNT_RUT # RUT de cliente
+    ACCOUNT_LOCAL # local de cliente
+    ACCOUNT_PASSWORD # contraseña de cliente
+    
+En desarrollo local pon estos valores en config.yml. Ver ejemplo en config.yml.example
+
+## Desarrollo local:
+
+Instala las dependencias
+
+    $ bundle
+    
+Copia y configura config.yml con tus datos
+
+    $ cp config.yml.example config.yml
+    
+Corre el servidor de desarrollo usando shotgun
+
+    $ bundle exec shotgun -p 4000
+    
